@@ -6,17 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        function sumOfTripledEvens(array) {
-            evenNums = array.filter(item => item % 2 == 0);
+<script>
 
-            return evenNums.reduce((total, currentItem) => total + currentItem**3, 0);
-        }   
+function unique(arr) {
+    uniqueArr = [];
 
-        let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    for (let i = 0; i < arr.length; i++) {
+        if (uniqueArr.includes(arr[i])) continue;
+        uniqueArr.push(arr[i]);
+    }
 
-        console.log(sumOfTripledEvens(array))
+    return uniqueArr;
+}
 
-    </script>
+let strings = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
+
+alert( unique(strings) ); // Hare, Krishna, :-O
+
+
+</script>
 </body>
 </html>
